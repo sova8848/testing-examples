@@ -240,6 +240,9 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.18.1</version>
                 <configuration>
+                 <argLine>
+                    -javaagent:path/to/jacocoagent.jar=excludes=java/util/UUID*
+                </argLine>
                 <excludes>
                     <exclude>com.pik.contact.gui.selenium.test.ContactsTest.java</exclude>
                     <exclude>com.pik.contact.cucumber.RunCukesTest.java</exclude>
